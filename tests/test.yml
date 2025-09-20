@@ -1,0 +1,6 @@
+---
+- name: Test playbook for ansible-role-docker
+  hosts: localhost
+  become: true
+  roles:
+    - role: freshwave_kmv.docker_ubuntu

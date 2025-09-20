@@ -1,0 +1,28 @@
+---
+docker_conflict_packages:
+  - docker.io
+  - docker-doc
+  - docker-compose
+  - docker-compose-v2
+  - podman-docker
+  - containerd
+  - runc
+
+docker_required_packages:
+  - ca-certificates
+  - curl
+  - gnupg
+
+docker_gpg_key_url: "https://download.docker.com/linux/{{ ansible_distribution | lower }}/gpg"
+docker_repo: "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} stable"
+
+docker_packages:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-buildx-plugin
+  - docker-compose-plugin
+
+docker_services:
+  - containerd
+  - docker

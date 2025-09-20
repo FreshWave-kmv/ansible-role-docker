@@ -1,0 +1,22 @@
+---
+galaxy_info:
+  role_name: "docker_ubuntu"
+  namespace: "freshwave_kmv"
+  author: "Kirill Shipilov"
+  description: "Role to install Docker on Ubuntu"
+  company: "FreshWave KMV"
+  license: "MIT"
+  min_ansible_version: "2.1"
+  platforms:
+    - name: "Ubuntu"
+      versions:
+        - "focal"
+        - "jammy"
+        - "noble"
+
+  galaxy_tags:
+    - docker
+    - ubuntu
+    - containers
+
+dependencies: []
